@@ -11,7 +11,8 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: ''
   },
-  mode: 'none',
+  // NOTE: https://webpack.js.org/configuration/mode/
+  mode: 'development',
   module: {
     rules: [
       {
