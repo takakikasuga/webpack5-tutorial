@@ -4,5 +4,5 @@ import _ from "lodash";
 
 const heading = new Heading();
 heading.render(_.upperFirst("webpack image"));
-const webpackImage = WebpackImage();
+const webpackImage = new WebpackImage();
 webpackImage.render();
