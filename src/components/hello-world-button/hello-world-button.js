@@ -1,0 +1,14 @@
+// const helloWorld = () => {
+//   console.log('Hello world!');
+// };
+
+class HelloWorldButton {
+  render() {
+    const button = document.createElement('button');
+    button.innerHTML = 'Hello World!';
+    const body = document.querySelector('body');
+    body.appendChild(button);
+  }
+}
+
+export default HelloWorldButton;
