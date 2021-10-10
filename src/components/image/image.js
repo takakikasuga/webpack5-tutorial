@@ -1,14 +1,14 @@
-import webpackImage from './webpackImage.jpeg';
-import './image.scss';
+import webpackImage from "./webpack-image.jpeg";
+import "./image.scss";
 
 class WebpackImage {
   render() {
-    const img = document.createElement('img');
+    const img = document.createElement("img");
     img.src = webpackImage;
-    img.alt = 'webpackImage';
-    img.classList.add('webpack-image');
+    img.alt = "webpackImage";
+    img.classList.add("webpack-image");
 
-    const bodyDomElement = document.querySelector('body');
+    const bodyDomElement = document.querySelector("body");
     bodyDomElement.appendChild(img);
   }
 }

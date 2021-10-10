@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     "hello-world": "./src/hello-world.js",
-    "webpack-image": "./src/webpackImage.js",
+    "webpack-image": "./src/webpack-image.js",
   },
   output: {
     // [name] = entryポイントのキー名称を指す。
@@ -16,6 +16,13 @@ module.exports = {
   },
   // NOTE: https://webpack.js.org/configuration/mode/
   mode: "production",
+  optimization: {
+    // NOTE: https://webpack.js.org/plugins/split-chunks-plugin/
+    splitChunks: {
+      // 依存関係のモジュールをキャッシュ化する。
+      chunks: "all",
+    },
+  },
   module: {
     rules: [
       {
