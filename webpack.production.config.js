@@ -21,6 +21,8 @@ module.exports = {
     splitChunks: {
       // 依存関係のモジュールをキャッシュ化する。
       chunks: "all",
+      // 最小サイズを30kbにする。
+      minSize: 3000,
     },
   },
   module: {
