@@ -1,6 +1,11 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+console.log("path.join(__dirname, 'dist')", path.join(__dirname, 'dist'));
+console.log(
+  "path.resolve(__dirname, './dist')",
+  path.resolve(__dirname, './dist')
+);
 
 module.exports = {
   entry: './src/index.js',
@@ -11,6 +16,18 @@ module.exports = {
   },
   // NOTE: https://webpack.js.org/configuration/mode/
   mode: 'development',
+  // NOTE: https://webpack.js.org/configuration/dev-server/
+  devServer: {
+    port: 9000,
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    // NOTE: https://webpack.js.org/configuration/dev-server/#devserverdevmiddleware
+    devMiddleware: {
+      index: 'index.html',
+      writeToDisk: true
+    }
+  },
   module: {
     rules: [
       {
