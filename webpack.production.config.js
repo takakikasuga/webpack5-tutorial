@@ -12,7 +12,7 @@ module.exports = {
     // [name] = entryポイントのキー名称を指す。
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "",
+    publicPath: "/static/",
   },
   // NOTE: https://webpack.js.org/configuration/mode/
   mode: "production",
